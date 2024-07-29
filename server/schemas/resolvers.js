@@ -29,17 +29,17 @@ const resolvers = {
           return { token, user };
         },
         // This needs the username, email, and password
-        addUser: async (parent, { username, email, password }) {
-            // ! NEEDS TO BE FINISHED
-        },
-        // This has the bookInput for it
-        saveBook: async (parent) {
-            // ! NEEDS TO BE FINISHED
-        },
-        // this only needs bookId
-        removeBook: async (parent, {bookId}) {
-            // ! NEEDS TO BE FINISHED
-        }
+        // addUser: async (parent, { username, email, password }) {
+        //     // ! NEEDS TO BE FINISHED
+        // },
+        // // This has the bookInput for it
+        // saveBook: async (parent) {
+        //     // ! NEEDS TO BE FINISHED
+        // },
+        // // this only needs bookId
+        // removeBook: async (parent, {bookId}) {
+        //     // ! NEEDS TO BE FINISHED
+        // }
     }
 }
 
