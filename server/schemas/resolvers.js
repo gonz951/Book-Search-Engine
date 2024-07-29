@@ -8,12 +8,13 @@ const resolvers = {
                 // ? Subject to change
                 return User.findOne({ _id: context.user.id })
             }
+            throw AuthenticationError;
         },
     },
     Mutation: {
         login: async (parent, { email, password }) => {
             // * This should be fine
-          const user = await User.findOne({email});
+          const user = await User.findOne({ email });
 
           if (!user) {
             throw AuthenticationError;
@@ -29,9 +30,11 @@ const resolvers = {
           return { token, user };
         },
         // This needs the username, email, and password
-        // addUser: async (parent, { username, email, password }) {
-        //     // ! NEEDS TO BE FINISHED
-        // },
+        addUser: async (parent, { username, email, password }) => {
+            const user = await User.create({ username, email, password });
+            const token = signToken(user);
+            return { token, user };
+        },
         // // This has the bookInput for it
         // saveBook: async (parent) {
         //     // ! NEEDS TO BE FINISHED
