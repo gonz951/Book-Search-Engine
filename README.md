@@ -8,7 +8,7 @@ This project was made in order to expose us to taking old technology and convert
 
 ## Installation
 
-'npm i' followed by 'npm run install', then run 'npm run build' and 'npm run develop'. However, it can also be used through (link).
+'npm i' followed by 'npm run install', then run 'npm run build' and 'npm run develop'. However, it can also be used through [Render](https://book-search-engine-y5ue.onrender.com).
 
 ## Usage
 
